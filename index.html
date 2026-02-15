@@ -2,13 +2,79 @@
 <html>
 <head>
 <title>For You 🖤</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
+<style>
+body{
+  background:#fff3e0;
+  font-family:'Playfair Display', serif;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+}
+#card{
+  background:white;
+  padding:30px;
+  border-radius:15px;
+  width:80%;
+  max-width:400px;
+  text-align:center;
+  box-shadow:0 10px 20px rgba(0,0,0,0.15);
+}
+input,button{
+  padding:10px;
+  border-radius:8px;
+  border:1px solid #ccc;
+  width:80%;
+}
+button{
+  background:#ff8a65;
+  color:white;
+  border:none;
+  cursor:pointer;
+}
+#letter{display:none;}
+</style>
 </head>
-<body style="font-family: Arial; background:#fff3e0; padding:40px;">
-<h2>Heyy Mithuu!</h2>
-<p>Varsh here. I know this might sound a little cringe, but had a thought to write this, let this be a note of gratitude.
+
+<body>
+
+<div id="card">
+  <div id="login">
+    <h3>🔒 Enter the secret</h3>
+    <input type="password" id="pass">
+    <br><br>
+    <button onclick="unlock()">Open 💌</button>
+  </div>
+
+  <div id="letter">
+    <h2>Heyy Mithuu 🖤</h2>
+    <p>
+    Varsh here. I know this might sound a little cringe, but had a thought to write this, let this be a note of gratitude.
 I’ve never been this close to someone before, not even with someone of the same gender. I’ve always carried a fear of being judged, even by the people I love the most. But unta, that fear never existed, and that means more to me than I can explain.
 I know life may take us in different directions, but still my heart will always look for your presence in every special moment. You’ll always be the one I want to share my happiness with.
 Thank you for being you, and for being mine in the ways that matter.
-Muahhh, pumpkin pie 🤍</p>
+    </p>
+    <p><b>Muahhh, pumpkin pie 🤍</b></p>
+  </div>
+</div>
+
+<audio autoplay loop>
+  <source src="https://www.bensound.com/bensound-music/bensound-sunny.mp3">
+</audio>
+
+<script>
+function unlock(){
+  if(document.getElementById("pass").value==="mithuu"){
+    document.getElementById("login").style.display="none";
+    document.getElementById("letter").style.display="block";
+  } else {
+    alert("Wrong password 💔");
+  }
+}
+</script>
+
 </body>
 </html>
